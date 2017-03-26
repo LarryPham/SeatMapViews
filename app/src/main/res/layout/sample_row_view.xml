@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.capsule.apps.airplanesquare.widgets.MapRowView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.capsule.apps.airplanesquare.widgets.MapCellView
+        android:id="@+id/first_item_view"
+        style="@style/CircleSeatItem"
+        android:clickable="true"
+        app:aspectFrameRatio="1.24"/>
+
+    <com.capsule.apps.airplanesquare.widgets.MapCellView
+        android:id="@+id/second_item_view"
+        style="@style/CircleSeatItem"
+        android:clickable="true"
+        app:aspectFrameRatio="1.24"/>
+
+    <com.capsule.apps.airplanesquare.widgets.MapCellView
+        android:id="@+id/third_item_view"
+        style="@style/CircleSeatItem"
+        android:clickable="true"
+        app:aspectFrameRatio="1.24"/>
+
+    <TextView
+        android:id="@+id/row_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="5"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"/>
+
+    <com.capsule.apps.airplanesquare.widgets.MapCellView
+        android:id="@+id/fourth_item_view"
+        style="@style/CircleSeatItem"
+        android:clickable="true"
+        app:aspectFrameRatio="1.24"/>
+
+    <com.capsule.apps.airplanesquare.widgets.MapCellView
+        android:id="@+id/fifth_item_view"
+        style="@style/CircleSeatItem"
+        android:clickable="true"
+        app:aspectFrameRatio="1.24"/>
+
+    <com.capsule.apps.airplanesquare.widgets.MapCellView
+        android:id="@+id/six_item_view"
+        style="@style/OvalSeatItem"
+        android:clickable="true"
+        app:aspectFrameRatio="0.64"/>
+
+</com.capsule.apps.airplanesquare.widgets.MapRowView>

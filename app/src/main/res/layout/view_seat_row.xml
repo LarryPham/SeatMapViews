@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/seat_row_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Extras Legroom"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"/>
+
+    <LinearLayout
+        android:id="@+id/seat_cell_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seat_row_title"
+        android:orientation="horizontal"
+        android:weightSum="7.0">
+
+        <com.capsule.apps.airplanesquare.widgets.SeatCellView
+            android:id="@+id/first_seat_cell_view"
+            style="@style/CircleSeatItem"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            app:aspectRatio="1.24"/>
+
+        <com.capsule.apps.airplanesquare.widgets.SeatCellView
+            android:id="@+id/second_seat_cell_view"
+            style="@style/OvalSeatItem"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            app:aspectRatio="0.64"/>
+
+        <com.capsule.apps.airplanesquare.widgets.SeatCellView
+            android:id="@+id/third_seat_cell_view"
+            style="@style/CircleSeatItem"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            app:aspectRatio="1.24"/>
+
+        <TextView
+            android:id="@+id/row_number_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="5"
+            tools:ignore="HardcodedText"/>
+
+        <com.capsule.apps.airplanesquare.widgets.SeatCellView
+            android:id="@+id/fourth_seat_cell_view"
+            style="@style/CircleSeatItem"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            app:aspectRatio="1.24"/>
+
+        <com.capsule.apps.airplanesquare.widgets.SeatCellView
+            android:id="@+id/fifth_seat_cell_view"
+            style="@style/CircleSeatItem"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            app:aspectRatio="1.24"/>
+
+        <com.capsule.apps.airplanesquare.widgets.SeatCellView
+            android:id="@+id/six_seat_cell_view"
+            style="@style/CircleSeatItem"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            app:aspectRatio="1.24"/>
+    </LinearLayout>
+</merge>
