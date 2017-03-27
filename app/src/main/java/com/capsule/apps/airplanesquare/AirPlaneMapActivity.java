@@ -18,5 +18,9 @@ public class AirPlaneMapActivity extends AppCompatActivity {
         setContentView(R.layout.activity_air_plane_map);
 
         final SeatMapView seatMapView = (SeatMapView) findViewById(R.id.seat_map_view);
+        for (int index = 0; index < 40; index++) {
+            seatMapView.addSeatRowView(new SeatRowView(this, null));
+        }
+
     }
 }

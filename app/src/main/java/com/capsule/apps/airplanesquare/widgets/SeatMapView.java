@@ -5,6 +5,7 @@ import android.graphics.Camera;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.support.v4.view.NestedScrollingChild;
 import android.support.v4.view.ScrollingView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import com.capsule.apps.airplanesquare.R;
 import java.util.ArrayList;
 
 
-public class SeatMapView extends ViewGroup implements ScrollingView{
+public class SeatMapView extends ViewGroup implements ScrollingView, NestedScrollingChild {
 
     private static final String TAG = SeatMapView.class.getSimpleName();
 
@@ -27,7 +28,7 @@ public class SeatMapView extends ViewGroup implements ScrollingView{
     private Paint mPaint = new Paint(Paint.FILTER_BITMAP_FLAG);
 
     private LinearLayout mBodyViewContainer;
-    private ImageView mHeaderViewContainer, mFooterViewContainer;
+    private View mHeaderViewContainer, mFooterViewContainer;
 
     private ArrayList<SeatRowView> mSeatRowViews = new ArrayList<>();
 
@@ -44,8 +45,9 @@ public class SeatMapView extends ViewGroup implements ScrollingView{
     public SeatMapView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         LayoutInflater.from(context).inflate(R.layout.view_seat_map, this, true);
-        mHeaderViewContainer = (ImageView) findViewById(R.id.header_plane_imageview);
-        mFooterViewContainer = (ImageView) findViewById(R.id.footer_plane_view);
+
+        mHeaderViewContainer = findViewById(R.id.header_plane_imageview);
+        mFooterViewContainer = findViewById(R.id.footer_plane_view);
         mBodyViewContainer = (LinearLayout) findViewById(R.id.body_seat_views_container);
         onInitialize();
     }
@@ -112,6 +114,11 @@ public class SeatMapView extends ViewGroup implements ScrollingView{
     }
 
     @Override
+    public boolean shouldDelayChildPressedState() {
+        return false;
+    }
+
+    @Override
     public int computeHorizontalScrollRange() {
         return mSeatRowViews.get(0).getMeasuredHeight();
     }
@@ -166,6 +173,7 @@ public class SeatMapView extends ViewGroup implements ScrollingView{
 
     @Override
     protected LayoutParams generateDefaultLayoutParams() {
-        return new MarginLayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        //noinspection ResourceType
+        return new MarginLayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
     }
 }

@@ -29,6 +29,7 @@ public class SeatRowView extends ViewGroup {
     private View mFirstCellView, mSecondCellView, mThirdCellView, mFourthCellView, mFifthCellView, mSixCellView;
     private LinearLayout mCellsContainer;
     private HashMap<String, View> mSeatViewStore = new HashMap<>();
+    private boolean mIsShowTitle = false;
 
     public SeatRowView(Context context, AttributeSet attrs) {
         this (context, attrs, 0);
@@ -130,5 +131,17 @@ public class SeatRowView extends ViewGroup {
     @Override
     protected LayoutParams generateDefaultLayoutParams() {
         return new MarginLayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+    }
+
+    public boolean isShowTitle() {
+        return mIsShowTitle;
+    }
+
+    public void setShowTitle(boolean showTitle) {
+        if (mIsShowTitle != showTitle) {
+            mIsShowTitle = showTitle;
+            mRowTitleView.setVisibility(showTitle ? View.GONE : View.VISIBLE);
+            invalidate();
+        }
     }
 }

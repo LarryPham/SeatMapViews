@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<merge
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
+    <View
         android:id="@+id/header_plane_imageview"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -17,15 +17,17 @@
     <LinearLayout
         android:id="@+id/body_seat_views_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_plane_imageview"
         android:orientation="vertical"/>
 
-    <ImageView
+    <View
         android:id="@+id/footer_plane_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_below="@id/body_seat_views_container"
         android:background="@drawable/footer_plane_321_background"
         android:contentDescription="@null"
         android:orientation="vertical"/>
 
-</LinearLayout>
+</merge>
