@@ -19,8 +19,15 @@ public class AirPlaneMapActivity extends AppCompatActivity {
 
         final SeatMapView seatMapView = (SeatMapView) findViewById(R.id.seat_map_view);
         for (int index = 0; index < 40; index++) {
-            seatMapView.addSeatRowView(new SeatRowView(this, null));
-        }
+            final SeatRowView seatRowView = new SeatRowView(this, null);
+            ((SeatCellView) seatRowView.findViewById(R.id.first_seat_cell_view)).setEnabled(true);
+            ((SeatCellView) seatRowView.findViewById(R.id.second_seat_cell_view)).setSelected(true);
+            ((SeatCellView) seatRowView.findViewById(R.id.third_seat_cell_view)).setEnabled(true);
+            ((SeatCellView) seatRowView.findViewById(R.id.fourth_seat_cell_view)).setSelected(true);
+            ((SeatCellView) seatRowView.findViewById(R.id.first_seat_cell_view)).setEnabled(false);
+            ((SeatCellView) seatRowView.findViewById(R.id.six_seat_cell_view)).setSelected(true);
 
+            seatMapView.addSeatRowView(seatRowView);
+        }
     }
 }

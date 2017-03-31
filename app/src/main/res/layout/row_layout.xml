@@ -8,19 +8,19 @@
     android:orientation="horizontal"
     android:weightSum="7.0">
 
-    <com.capsule.apps.airplanesquare.widgets.AspectRatioView
+    <com.capsule.apps.airplanesquare.widgets.SeatCellView
         style="@style/OvalSeatItem"
         android:layout_weight="1.0"
         android:clickable="true"
         app:aspectRatio="0.64"/>
 
-    <com.capsule.apps.airplanesquare.widgets.AspectRatioView
+    <com.capsule.apps.airplanesquare.widgets.SeatCellView
         style="@style/CircleSeatItem"
         android:layout_weight="1.0"
         android:clickable="true"
         app:aspectRatio="1.24"/>
 
-    <com.capsule.apps.airplanesquare.widgets.AspectRatioView
+    <com.capsule.apps.airplanesquare.widgets.SeatCellView
         style="@style/CircleSeatItem"
         android:layout_weight="1.0"
         android:clickable="true"
@@ -36,19 +36,19 @@
         android:text="Fuck"
         tools:ignore="HardcodedText"/>
 
-    <com.capsule.apps.airplanesquare.widgets.AspectRatioView
+    <com.capsule.apps.airplanesquare.widgets.SeatCellView
         style="@style/CircleSeatItem"
         android:layout_weight="1.0"
         android:clickable="true"
         app:aspectRatio="1.24"/>
 
-    <com.capsule.apps.airplanesquare.widgets.AspectRatioView
+    <com.capsule.apps.airplanesquare.widgets.SeatCellView
         style="@style/CircleSeatItem"
         android:layout_weight="1.0"
         android:clickable="true"
         app:aspectRatio="1.24"/>
 
-    <com.capsule.apps.airplanesquare.widgets.AspectRatioView
+    <com.capsule.apps.airplanesquare.widgets.SeatCellView
         style="@style/CircleSeatItem"
         android:layout_weight="1.0"
         android:clickable="true"

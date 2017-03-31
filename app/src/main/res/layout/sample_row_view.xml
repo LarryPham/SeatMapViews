@@ -10,19 +10,19 @@
         android:id="@+id/first_item_view"
         style="@style/CircleSeatItem"
         android:clickable="true"
-        app:aspectFrameRatio="1.24"/>
+        app:aspectRatio="1.24"/>
 
     <com.capsule.apps.airplanesquare.widgets.MapCellView
         android:id="@+id/second_item_view"
         style="@style/CircleSeatItem"
         android:clickable="true"
-        app:aspectFrameRatio="1.24"/>
+        app:aspectRatio="1.24"/>
 
     <com.capsule.apps.airplanesquare.widgets.MapCellView
         android:id="@+id/third_item_view"
         style="@style/CircleSeatItem"
         android:clickable="true"
-        app:aspectFrameRatio="1.24"/>
+        app:aspectRatio="1.24"/>
 
     <TextView
         android:id="@+id/row_number"
@@ -38,18 +38,18 @@
         android:id="@+id/fourth_item_view"
         style="@style/CircleSeatItem"
         android:clickable="true"
-        app:aspectFrameRatio="1.24"/>
+        app:aspectRatio="1.24"/>
 
     <com.capsule.apps.airplanesquare.widgets.MapCellView
         android:id="@+id/fifth_item_view"
         style="@style/CircleSeatItem"
         android:clickable="true"
-        app:aspectFrameRatio="1.24"/>
+        app:aspectRatio="1.24"/>
 
     <com.capsule.apps.airplanesquare.widgets.MapCellView
         android:id="@+id/six_item_view"
         style="@style/OvalSeatItem"
         android:clickable="true"
-        app:aspectFrameRatio="0.64"/>
+        app:aspectRatio="0.64"/>
 
 </com.capsule.apps.airplanesquare.widgets.MapRowView>

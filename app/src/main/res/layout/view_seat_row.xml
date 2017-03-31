@@ -38,6 +38,7 @@
             style="@style/OvalSeatItem"
             android:layout_weight="1.0"
             android:clickable="true"
+            app:isLegRoom="true"
             app:aspectRatio="0.64"/>
 
         <com.capsule.apps.airplanesquare.widgets.SeatCellView
